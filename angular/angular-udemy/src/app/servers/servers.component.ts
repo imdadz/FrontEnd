@@ -20,7 +20,7 @@ export class ServersComponent implements OnInit {
   }
 
   onServerStatus(){
-    this.serverStatus="New Server is available";
+    this.serverStatus="New Server is available! Name is "+this.serverName;
   }
 
   onUpdateServer(event: Event){
