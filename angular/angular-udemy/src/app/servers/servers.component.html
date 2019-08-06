@@ -14,8 +14,5 @@ type="text"
     [disabled]="!allowNewServer"
     (click)="onCreateServer()" > Add New Server</button>
 <!-- <p>{{serverCreationStatus}}</p> -->
-<p *ngIf = "serverCreated; else noServer"> Server was Created, server name is {{ serverName }} </p>
-
-
-<app-server></app-server>
-<app-server></app-server>
+<p *ngIf = "serverCreated"> Server was Created, server name is {{ serverName }} </p>
+<app-server *ngFor="let server of servers"></app-server>
